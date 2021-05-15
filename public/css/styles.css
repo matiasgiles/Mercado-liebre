@@ -1,0 +1,340 @@
+/* Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+● Tipografías
+Familia: 'Roboto'
+Nos envían esta demo de cómo cargar fuentes de Google Fonts. Además
+podemos consultar el siguiente recurso aquí, para más detalle.
+● Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #EAC926;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.burger-menu{
+    display: block;
+    margin: auto;
+    max-width: 50px;
+    text-align: center;
+    font-size: 18px;
+    background-color:#03264C ;
+    color: white;
+    padding: 15px 0;
+    border-radius: 8px;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0
+
+}
+.main-navbar a {
+    text-decoration: none;
+    color: #222
+
+
+}
+
+.main-navbar{
+    display: none;
+}
+
+
+main section {
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color:#ebebeb;
+    margin: auto;
+    justify-content: center;
+}
+
+
+.titulares{
+    font-size:24px;
+
+}
+
+main section article {
+width: 100%;
+margin:10px;
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+background-color: white;
+}
+section article img {
+    width: 100%;
+}
+
+.contenedorinferior{
+    display: flex;
+    border-top: 1px solid #ebebeb;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+    
+}
+
+.precios{
+    font-size:18px;
+    width:30%;
+    flex-grow: 1;
+    padding: 10px;
+
+}
+
+.descuentos{
+    font-size:16px;
+    width:70%;
+    color: #39b54a;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.descripciones{
+    font-size:16px;
+    color: #666;
+    padding: 10px;
+
+
+}
+
+.contenedorinferior i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius:50%;
+    }
+
+
+    .contenedorinferior div{
+display:flex;
+flex-direction: row-reverse;
+width: 100%;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    
+   
+}
+
+.contenedor-envio{
+
+    text-align: center;
+  
+    padding:15px
+}
+
+.contenedor-seguridad{
+
+    text-align: center;
+ 
+    padding:15px
+}
+
+.contenedor-tarjeta{
+
+    text-align: center;
+  
+    padding:15px
+
+}
+
+footer i{
+    font-size:2em;
+    margin-bottom:10px;
+    color: #03264C
+}
+
+
+
+
+
+.formulariologin, .formularioregister{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    background-color: #EAC926;
+    align-items: center;
+    padding: 20px;
+    height: 90%;
+    box-shadow: 0px 10px 10px rgb(100, 100, 100);
+    justify-content:space-around;
+
+    
+}
+.formulariologin div, .formulariologin article {
+        padding:15px;
+        font-size: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:25%;
+        justify-content: space-evenly;  
+
+}
+.formulariologin div input{
+    border-radius: 5px;
+    height: 25%;
+    padding: 5px;
+    border:0px;
+
+}
+.formulariologin div button{
+    border-radius: 5px;
+    border: 1px solid #cbcaca;
+    width: 30%;
+    height: 20%;
+    align-self: center;
+}
+
+.formulariologin article{
+    border-bottom: 1px solid grey;
+    line-height: 2; 
+}
+
+.formularioregister div{
+    text-align: center;
+    font-size: 14px;
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:5px;
+}
+.formularioregister div input{
+    border:0px;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+#contenedorRadio{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-top: 10px;
+    
+}
+
+
+.formularioregister article{
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+
+.mainformularios{
+    background-color: #cfcfcf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+@media (min-width:361)
+{
+
+}
+
+@media (min-width: 768px) {
+    .main-header{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .left-header{
+        max-width:350px;
+        padding: 15px;
+        text-align: right;
+    }
+    .main-navbar{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px
+    }
+    
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li {
+        margin: 0 5px
+    }
+    .burger-menu{
+        display:none
+    }
+    main section article {
+        width: 45%;
+        }
+        .formulariologin, .formularioregister{
+            width:60%;
+        }
+
+       
+}
+
+@media (min-width:992px){
+    main section article {
+        width: 20%;
+        }
+        .precios{
+            font-size:16px;
+           }
+    main section {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .formulariologin, .formularioregister{
+        width:40%;
+    }
+        
+}
+
+@media (min-width:1200){
+
+}
