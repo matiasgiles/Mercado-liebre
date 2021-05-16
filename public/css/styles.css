@@ -146,6 +146,37 @@ flex-direction: row-reverse;
 width: 100%;
 }
 
+#checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+#checkbox input {
+    width: 80%;
+}
+#checkbox p {
+    width:20%
+}
+
+#botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#botones button {
+    border-radius: 5px;
+    padding: 5px;
+    border:0px;
+    height: 20px;
+    width: 50px;
+   
+}
+
+
+
 footer{
     display:flex;
     flex-direction: column;
