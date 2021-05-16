@@ -99,8 +99,20 @@ section article img {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 5px;
+    position: relative;
     
 }
+
+    .contenedorinferior div{
+display:flex;
+flex-direction: row-reverse;
+width: 100%;
+position: absolute;
+bottom: 60px;
+right: 5px;
+
+}
+
 
 .precios{
     font-size:18px;
@@ -139,12 +151,6 @@ section article img {
     border-radius:50%;
     }
 
-
-    .contenedorinferior div{
-display:flex;
-flex-direction: row-reverse;
-width: 100%;
-}
 
 #checkbox {
     display: flex;
