@@ -86,8 +86,20 @@ main section {
 main section article {
 width: 100%;
 margin:10px;
-
 background-color: white;
+transition-property: all;
+transition-duration: 350ms;
+position: relative;
+
+}
+
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+
+main section article:hover .descripciones{
+    display: block;
 }
 
 
@@ -102,21 +114,39 @@ section article img {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 5px;
-    position: relative;
+    
     
 }
 
-    .contenedorinferior div{
-display:flex;
-flex-direction: row-reverse;
-width: 100%;
-position: absolute;
-bottom: 60px;
-right: 5px;
+ 
+.contenedorinferior i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius:50%;
+    position: absolute;
+    top: 285px;
+    right: 15px;
+    transition:all 500ms;
+    } 
+
+
+main section article:hover i{
+        transform: rotateZ(360deg);
+    }
+
+.descripciones{
+    Display:none;
+    font-size:16px;
+    color: #666;
+    padding: 10px;
 
 }
-
-
 .precios{
     font-size:18px;
     width:30%;
@@ -134,61 +164,14 @@ right: 5px;
     justify-content:center;
 }
 
-.descripciones{
-    Display:block;
-    font-size:16px;
-    color: #666;
-    padding: 10px;
-
-}
-
-main section article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
-}
 
 
-.contenedorinferior i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    color: #39b54a;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius:50%;
-    }
 
 
-#checkbox {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  justify-content:space-between;
-}
 
-#checkbox input {
-    width: 80%;
-}
-#checkbox p {
-    width:20%
-}
 
-#botones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-}
-#botones button {
-    border-radius: 5px;
-    padding: 5px;
-    border:0px;
-    height: 20px;
-    width: 50px;
-   
-}
+
 
 
 
@@ -269,6 +252,13 @@ footer i{
     width: 30%;
     height: 20%;
     align-self: center;
+    transition-property: all;
+    transition-duration: 500ms;
+
+}
+.formulariologin div button:hover{
+    background-color:#0022AA;
+    color: white;
 }
 
 .formulariologin article{
@@ -300,7 +290,34 @@ footer i{
     margin-top: 10px;
     
 }
+#checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  justify-content:space-between;
+}
 
+#checkbox input {
+    width: 80%;
+}
+#checkbox p {
+    width:20%
+}
+
+#botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#botones button {
+    border-radius: 5px;
+    padding: 5px;
+    border:0px;
+    height: 20px;
+    width: 50px;
+   
+}
 
 .formularioregister article{
     font-size:20px;
