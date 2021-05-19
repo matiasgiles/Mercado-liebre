@@ -89,7 +89,7 @@ margin:10px;
 background-color: white;
 transition-property: all;
 transition-duration: 350ms;
-position: relative;
+
 
 }
 
@@ -114,6 +114,7 @@ section article img {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 5px;
+    position: relative;
     
     
 }
@@ -130,7 +131,7 @@ section article img {
     background-color: #FFF;
     border-radius:50%;
     position: absolute;
-    top: 285px;
+    top:-15px;
     right: 15px;
     transition:all 500ms;
     } 
