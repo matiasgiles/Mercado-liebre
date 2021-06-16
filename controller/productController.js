@@ -1,13 +1,15 @@
-
+const path = require('path');
 
 const productController ={
 
- catalogue(req,res) {
-    
- },
+ catalogue(req, res){
+    res.render("home.ejs")
+}
 
- detail(req,res) {
 
- }
+
 
 }
+
+
+module.exports= productController
