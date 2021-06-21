@@ -1,0 +1,34 @@
+[   
+    
+    {
+        "id": 1,
+        "image": "/images/cafetera-moulinex.jpg",
+        "name": "cafetera",
+        "price": 255
+      },
+
+      {
+        "id": 2,
+        "image": "/images/cafetera-moulinex.jpg",
+        "name": "cafetera",
+        "price": 255
+      },
+      {
+        "id": 3,
+        "image": "/images/cafetera-moulinex.jpg",
+        "name": "cafetera",
+        "price": 255
+      },
+      {
+        "id": 4,
+        "image": "/images/cafetera-moulinex.jpg",
+        "name": "cafetera",
+        "price": 255
+      }
+
+    
+
+]
+
+ 
+

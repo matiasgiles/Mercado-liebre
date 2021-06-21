@@ -4,10 +4,9 @@ const path = require('path');
 
 module.exports= {
     database: path.resolve(__dirname, '../data/products.json'),
-    readfile() {
-        // esta es mi primer funcion fundamental, la idea es que me permite leer 
+    readFile() {
+        // esta es mi primer funcion fundamental, la idea es que me permite leer la base de datos
 
-        //(y luego con otras, pero a partir de ella, editar) la base de datos.
         // 1) le marco la ruta
         const productPath = this.database;
         // 2) lo leo
@@ -65,13 +64,57 @@ module.exports= {
 
     delete(id) {
         // El id viene del controlador
-        const planets = this.readFile();
+        const products = this.readFile();
 
-        const newPlanets = planets.filter(planet => planet.id != id);
-        // devuelve el json sin el archivo que no queremos
-        this.writeFile(newPlanets);
-    }
+        const newproducts = products.filter(product => product.id != id);
+        
+        this.writeFile(newproducts);
+        //esta ultima linea es la que le manda info a writefile
+    
+    },
 
 // SEGUNDO METODO MODIFICATIVO: EDIT
+
+        edit(data, id) {
+            //vienen del controlador
+            const products = this.readFile();
+
+            const newProduct = products.map(product => {
+                if(product.id == id){
+                    product = {
+                        id: product.id,
+                        ...data
+                    }
+                }
+                return product;
+            });
+            this.writeFile(newProduct);
+        },
+
+// TERCER METODO MODIFICATIVO: CREATE
+
+//para este hay que implementar un paso anterior que es generar un nuevo id. (todo lo demas viene del formulario que llena el cliente)
+
+
+        generateId() {
+            const products = this.readFile();
+            const lastElement = products.pop();
+            return lastElement.id + 1;
+        },
+
+//una vez que ya tengo mi funcion generadora de id, hago la de crear
+
+        create(product) {
+            //utilizo la funcion de generar id
+            product.id = this.generateId();
+
+            // Leer el archivo
+            const products = this.readFile();
+            // Agregar nuestro planeta al array de planetas
+            const updatedProducts = [...products, product];
+            // Volver a escribir el archivo con el nuevo array de planetas
+            this.writeFile(updatedProducts);
+            return product;
+        },
 
 }
