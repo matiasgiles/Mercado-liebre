@@ -5,6 +5,7 @@ const productController= require('../controller/productController')
 const path = require('path');
 
 productRoutes.get("/", productController.catalogue)
+productRoutes.get("/register", productController.productRegister)
 
 
 

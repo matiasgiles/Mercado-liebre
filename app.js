@@ -4,6 +4,7 @@ const port= process.env.PORT || 3000;
 
 const path = require('path');
 const productRoutes = require('./routes/productRoutes');
+const userRoutes = require ('./routes/userRoutes')
 
 const publicPath =path.resolve (__dirname, "./public");
 app.use(express.static(publicPath));
@@ -11,12 +12,5 @@ app.use(express.static(publicPath));
 app.listen (port,() => console.log("servidor corriendo en el puerto 3000"))
 
 app.use ("/", productRoutes)
+app.use('/user', userRoutes)
 
-
-app.get ("/register", (req, res)=> {
-    res.render(path.join(__dirname, "views/register.ejs"))
-});
-
-app.get ("/login", (req, res)=> {
-    res.render(path.join(__dirname, "views/login.ejs"))
-});
