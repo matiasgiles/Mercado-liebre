@@ -142,10 +142,12 @@ main section article:hover i{
     }
 
 .descripciones{
-    Display:none;
+    Display:block;
     font-size:16px;
     color: #666;
     padding: 10px;
+    transition-property: all;
+    transition-duration: 350ms;
 
 }
 .precios{

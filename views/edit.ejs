@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>edit</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /> 
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    EDIT
+
+
+    <form action= '/products/<%= product.id %>?_method=PUT' method=POST>
+    
+        <article>
+            <label>¡Bienvenidx a Mercado Liebre!<br>Aqui puede editar su producto</label>   
+        </article>
+        
+        <div>
+            <label>Nombre de producto:</label>
+            <input type="text" name="ProductName" placeholder="Nombre de usuario"></input>
+        </div>
+        <div>
+            <label>Precio:</label>
+            <input type="number" name="price" placeholder="precio"></input>
+        </div>
+        <div>
+            <label>imagen:</label>
+            <input type="file" name="Image" ></input>
+        </div>
+    </form>
 </body>
 </html>

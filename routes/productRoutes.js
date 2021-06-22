@@ -4,19 +4,19 @@ const port= process.env.PORT || 3000;
 const productController= require('../controller/productController')
 
 
-productRoutes.get("/", productController.catalogue)
+productRoutes.get("/catalogue", productController.catalogue)
 
 // Create
 productRoutes.get("/create", productController.createProduct)
 productRoutes.post('/create', productController.create)
 
-// Update
-productRoutes.get('id/edit', productController.editProduct)
+// Edit
+productRoutes.get(':id/edit', productController.editProduct)
 productRoutes.put(':id', productController.edit)
 //falta repasar el update
 
 // Delete
-planetsRoutes.delete('/:id', productController.delete);
+productRoutes.delete('/:id', productController.delete);
 
 
 

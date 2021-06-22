@@ -11,6 +11,6 @@ app.use(express.static(publicPath));
 
 app.listen (port,() => console.log("servidor corriendo en el puerto 3000"))
 
-app.use ("/", productRoutes)
+app.use ("/products", productRoutes)
 app.use('/user', userRoutes)
 

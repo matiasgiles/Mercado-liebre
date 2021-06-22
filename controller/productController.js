@@ -1,12 +1,14 @@
 const path = require('path');
+const productModel = require('../model/productModel')
 
+
+console.log(productModel.findAll())
 const productController ={
-
 
 // POR UN LADO LOS QUE SE COMUNICAN DIRECTAMENTE CON LAS VISTAS.
  catalogue(req, res){
      const products= productModel.findAll();
-    res.render("home.ejs", {products})
+    res.render("home.ejs",{products})
 },
 createProduct(req, res){
     res.render('createProduct.ejs')
