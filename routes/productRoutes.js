@@ -5,6 +5,9 @@ const productController= require('../controller/productController')
 
 
 productRoutes.get("/catalogue", productController.catalogue)
+productRoutes.get('/control', productController.controlPanel)
+
+
 
 // Create
 productRoutes.get("/create", productController.createProduct)

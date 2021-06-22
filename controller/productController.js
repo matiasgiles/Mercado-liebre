@@ -18,6 +18,11 @@ editProduct(req, res){
     const product = productModel.findByPk(req.params.id)
     res.render('edit.ejs', {product} )
 },
+
+controlPanel(req, res){
+    const products= productModel.findAll();
+res.render('controlPanel.ejs', {products})
+},
  
 
 
