@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Edit Product</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /> 
@@ -40,7 +40,7 @@
     </header>
 
     <main class="mainformularios">
-        <form action= '/products/<%=  %>?_method=PUT' method=POST class=formulariologin>
+        <form action= '/products/<%= product.id%>?_method=PUT' method=POST class=formulariologin enctype="multipart/form-data">
                
                 <article>
                     <label>Aqui podra editar su producto</label>   
@@ -48,17 +48,21 @@
 
                 <div>
                     <label>Nuevo nombre de producto:</label>
-                    <input type="text" name="ProductName" placeholder="Nombre de usuario"></input>
+                    <input type="text" name="name" placeholder="Nombre de usuario"></input>
                 </div>
                 <div>
                     <label>Precio:</label>
                     <input type="number" name="price" placeholder="precio"></input>
                 </div>
                 <div>
+                    <label>Descuento:</label>
+                    <input type="number" name="discount" placeholder="descuento"></input>
+                </div>
+                <div>
                     <label>Imagen:</label>
                     <input type="file" name="Image" ></input>
                 </div>
-            
+            <button type="submit">Submit</button>
             </form>
 
     </main>

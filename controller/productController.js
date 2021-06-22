@@ -51,7 +51,8 @@ edit: (req, res) => {
     //averiguar
     productModel.update(data, id);
 
-    res.redirect('/planets/detail/' + id);
+
+    res.redirect('/products/catalogue');
 },
 
 
@@ -66,14 +67,14 @@ edit: (req, res) => {
 		const {
 			name,
 			price,
-			description,
+			discount,
 		} = req.body;
 		//es req.body porque lo manda por el body del formulario.
 
 		const product = {
 			name, //esto es lo mismo que name: name
             price,
-			description,
+			discount,
 		};
         // aca genere este objeto que contiene toda la info que vino de mi formulario, y se la paso al modelo.
 
