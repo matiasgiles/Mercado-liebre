@@ -14,7 +14,7 @@ productRoutes.get("/create", productController.createProduct)
 productRoutes.post('/create', productController.create)
 
 // Edit
-productRoutes.get('/edit', productController.editProduct)
+productRoutes.get('/edit/:id', productController.editProduct)
 productRoutes.put(':id', productController.edit)
 //falta repasar el update
 
