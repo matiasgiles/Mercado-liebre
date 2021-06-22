@@ -57,7 +57,7 @@
                         
                         <p class =descripciones><%= product.name %> </p> 
                     
-                    <button>Editar Producto</button>
+                    <a href="/"><button>Editar Producto</button></a>
                   <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
 									<button type="submit" class="button">ELIMINAR</button>
 								</form>
