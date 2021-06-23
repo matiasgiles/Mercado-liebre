@@ -1,23 +1,24 @@
 [
   {
     "id": 1,
-    "name": "Este producto Fue editado",
-    "price": "33",
-    "discount": "11"
+    "name": "Mini Pimmer",
+    "price": "4500",
+    "discount": "15",
+    "image": "1624412651401.jpeg"
   },
   {
     "id": 2,
-    "name": "Este fue el tercero",
-    "price": "112",
-    "discount": "323",
-    "image": "1624411407433.png"
+    "name": "Batidora Cara",
+    "price": "300000",
+    "discount": "20",
+    "image": "1624412543016.jpeg"
   },
   {
     "id": 3,
-    "name": "Este producto Fue editado 2",
-    "price": "444",
-    "discount": "22",
-    "image": "/images/1624411070969.JPG"
+    "name": "Batidora",
+    "price": "3999",
+    "discount": "10",
+    "image": "1624412487541.jpeg"
   },
   {
     "id": 4,
