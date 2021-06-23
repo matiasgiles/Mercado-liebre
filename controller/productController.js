@@ -47,9 +47,28 @@ delete: (req, res) => {
 edit: (req, res) => {
     const data = req.body;
     //aca viene lo que puso el usuario en el form
+    console.log(req.body)
+
     const { id } = req.params;
+
+    const unEditedProduct= productModel.findByPk(id)
     //averiguar
-    productModel.update(data, id);
+
+// ahora viene la imagen
+
+const { file } = req;
+let image;
+
+if (file) {
+    image = file.filename;
+} else {
+    image = unEditedProduct.image;
+}
+
+data.image = image;
+
+
+    productModel.edit(data, id);
 
 
     res.redirect('/products/catalogue');

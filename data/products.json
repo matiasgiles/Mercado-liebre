@@ -1,66 +1,57 @@
-[   
-    
-    {
-        "id": 1,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "30%"
-      },
-
-      {
-        "id": 2,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "30%"
-      },
-      {
-        "id": 3,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "3%"
-      },
-      {
-        "id": 4,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "35%"
-      },
-      {
-        "id": 5,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "35%"
-      },
-      {
-        "id": 6,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "35%"
-      },
-      {
-        "id": 7,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "35%"
-      },
-      {
-        "id": 8,
-        "image": "img-cafetera-moulinex.jpg",
-        "name": "cafetera",
-        "price": 255,
-        "discount": "35%"
-      }
-
-    
-
+[
+  {
+    "id": 1,
+    "name": "Este producto Fue editado",
+    "price": "33",
+    "discount": "11"
+  },
+  {
+    "id": 2,
+    "name": "Este fue el tercero",
+    "price": "112",
+    "discount": "323",
+    "image": "1624411407433.png"
+  },
+  {
+    "id": 3,
+    "name": "Este producto Fue editado 2",
+    "price": "444",
+    "discount": "22",
+    "image": "/images/1624411070969.JPG"
+  },
+  {
+    "id": 4,
+    "image": "img-cafetera-moulinex.jpg",
+    "name": "cafetera",
+    "price": 255,
+    "discount": "35%"
+  },
+  {
+    "id": 5,
+    "image": "img-cafetera-moulinex.jpg",
+    "name": "cafetera",
+    "price": 255,
+    "discount": "35%"
+  },
+  {
+    "id": 6,
+    "image": "img-cafetera-moulinex.jpg",
+    "name": "cafetera",
+    "price": 255,
+    "discount": "35%"
+  },
+  {
+    "id": 7,
+    "image": "img-cafetera-moulinex.jpg",
+    "name": "cafetera",
+    "price": 255,
+    "discount": "35%"
+  },
+  {
+    "id": 8,
+    "image": "img-cafetera-moulinex.jpg",
+    "name": "cafetera",
+    "price": 255,
+    "discount": "35%"
+  }
 ]
-
- 
-

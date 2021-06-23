@@ -57,7 +57,7 @@ module.exports= {
         // Pasar la data a json
         const dataJson = JSON.stringify(newData, null, 2);
         // Escribir el archivo
-        fs.writeFileSync(this.filename, dataJson);
+        fs.writeFileSync(this.database, dataJson);
     },
 
 // VAMOS CON EL PRIMER METODO MODIFICATIVO: DELETE
