@@ -1,12 +1,12 @@
 const path = require('path');
 const productModel = require('../model/productModel')
-
+let db = require('../database/models')
 
 const productController ={
 
 // POR UN LADO LOS QUE SE COMUNICAN DIRECTAMENTE CON LAS VISTAS.
- catalogue(req, res){
-     const products= productModel.findAll();
+ catalogue: async(req, res) =>{
+     const products= await db.Products.findAll();
     res.render("catalogue.ejs",{products})
 },
 createProduct(req, res){
@@ -19,8 +19,8 @@ editProduct(req, res){
     res.render('edit.ejs', {product} )
 },
 
-controlPanel(req, res){
-    const products= productModel.findAll();
+controlPanel: async(req, res)=>{
+    const products= await db.Products.findAll();
 res.render('controlPanel.ejs', {products})
 },
  
@@ -33,43 +33,39 @@ res.render('controlPanel.ejs', {products})
 //DELETE 
 
 delete: (req, res) => {
-    //averiguar
-    const id = req.params.id;
     
-    productModel.delete(id);
+    const id = req.params.id;
+    db.Products.destroy({where :{id:id}})
 
-    res.redirect('/planets/list');
+    res.redirect('/products/catalogue');
 },
 
 // EDIT
 
 
 edit: (req, res) => {
-    const data = req.body;
-    //aca viene lo que puso el usuario en el form
-    console.log(req.body)
-
+    //aca viene lo que puso el usuario en el for
     const { id } = req.params;
-
-    const unEditedProduct= productModel.findByPk(id)
+  
     //averiguar
 
 // ahora viene la imagen
+// const unEditedProduct= db.Products.findbyPk(id)
 
-const { file } = req;
-let image;
+// const { file } = req;
+// let image;
 
-if (file) {
-    image = file.filename;
-} else {
-    image = unEditedProduct.image;
-}
-
-data.image = image;
-
-
-    productModel.edit(data, id);
-
+// if (file) {
+//     image = file.filename;
+// } else {
+//     image = unEditedProduct.image;
+// }
+// data.image = image;
+db.Products.update({
+    name: req.body.name,
+    price: req.body.price,
+    discount: req.body.discount,  
+},{where: {id: id}})
 
     res.redirect('/products/catalogue');
 },
@@ -78,28 +74,20 @@ data.image = image;
 // CREATE
 
     create: (req, res) => {
-		const { filename } = req.file;
-		//es req.file porque lo manda por mullter
 
-		image = filename;
+        db.Products.create({
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            
+        })
+        res.redirect('/products/catalogue');
+        
+		// const { filename } = req.file;
+		// //es req.file porque lo manda por mullter
 
-		const {
-			name,
-			price,
-			discount,
-		} = req.body;
-		//es req.body porque lo manda por el body del formulario.
+		// image = filename;
 
-		const product = {
-			name, //esto es lo mismo que name: name
-            price,
-			discount,
-		};
-        // aca genere este objeto que contiene toda la info que vino de mi formulario, y se la paso al modelo.
-
-		const newProduct = productModel.create(product);
-
-		res.redirect('/' + newProduct.id);
 	},
 
 

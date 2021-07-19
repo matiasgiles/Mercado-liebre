@@ -28,7 +28,7 @@ productRoutes.get('/control', productController.controlPanel)
 
 // Create
 productRoutes.get("/create", productController.createProduct)
-productRoutes.post('/create', productController.create)
+productRoutes.post('/createNew', productController.create)
 
 // Edit
 productRoutes.get('/edit/:id', productController.editProduct)
