@@ -1,5 +1,5 @@
 const path = require('path');
-const productModel = require('../model/productModel')
+
 let db = require('../database/models')
 
 const productController ={
@@ -13,9 +13,9 @@ createProduct(req, res){
     res.render('createProduct.ejs')
 },
 
-editProduct(req, res){
+editProduct: async(req, res)=>{
 
-    const product = productModel.findByPk(req.params.id)
+    const product = await db.Products.findByPk(req.params.id)
     res.render('edit.ejs', {product} )
 },
 

@@ -6,10 +6,10 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        firstName: {
+        first_name: {
             type: dataTypes.STRING
         },
-        lastName: {
+        last_name: {
             type: dataTypes.STRING
         },
         password: {
@@ -17,7 +17,20 @@ module.exports = (sequelize, dataTypes) => {
         },
         //preguntar si tengo que poner INTEGER o TINY integer,
 
-        profilePicture: {
+        profile_picture: {
+            type: dataTypes.STRING
+        },
+        birth_date: {
+            type: dataTypes.DATE
+        },
+        user_type: {
+            type: dataTypes.STRING
+        },
+        adress: {
+            type: dataTypes.STRING
+        },
+
+        alias: {
             type: dataTypes.STRING
         }
 

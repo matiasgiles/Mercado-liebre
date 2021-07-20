@@ -7,4 +7,6 @@ userRoutes.get("/login", userController.login)
 userRoutes.get("/register", userController.userRegister)
 
 
+userRoutes.post("/register", userController.createUser)
+
 module.exports= userRoutes
