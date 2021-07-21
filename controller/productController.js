@@ -32,10 +32,10 @@ res.render('controlPanel.ejs', {products})
 
 //DELETE 
 
-delete: (req, res) => {
+delete: async (req, res) => {
     
     const id = req.params.id;
-    db.Products.destroy({where :{id:id}})
+    await db.Products.destroy({where :{id:id}})
 
     res.redirect('/products/catalogue');
 },
@@ -43,28 +43,31 @@ delete: (req, res) => {
 // EDIT
 
 
-edit: (req, res) => {
+edit: async (req, res) => {
     //aca viene lo que puso el usuario en el for
     const { id } = req.params;
   
     //averiguar
 
 // ahora viene la imagen
-// const unEditedProduct= db.Products.findbyPk(id)
+ const unEditedProduct= db.Products.findByPk(id)
 
-// const { file } = req;
-// let image;
+ const { file } = req;
+ let image;
 
-// if (file) {
-//     image = file.filename;
-// } else {
-//     image = unEditedProduct.image;
-// }
-// data.image = image;
-db.Products.update({
+ if (file) {
+    image = file.filename;
+ } else {
+     image = unEditedProduct.image;
+ }
+ 
+
+
+ await db.Products.update({
     name: req.body.name,
     price: req.body.price,
-    discount: req.body.discount,  
+    discount: req.body.discount,
+    image: image,  
 },{where: {id: id}})
 
     res.redirect('/products/catalogue');
@@ -73,20 +76,20 @@ db.Products.update({
 
 // CREATE
 
-    create: (req, res) => {
+    create: async (req, res) => {
+    const image = req.file.filename
 
-        db.Products.create({
+
+       await db.Products.create({
             name: req.body.name,
             price: req.body.price,
             discount: req.body.discount,
+            image: image,
             
         })
         res.redirect('/products/catalogue');
         
-		// const { filename } = req.file;
-		// //es req.file porque lo manda por mullter
-
-		// image = filename;
+		
 
 	},
 

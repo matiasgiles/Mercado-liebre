@@ -7,7 +7,6 @@ const multer = require('multer');
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		let ruta = path.join(__dirname, '../public/images');
-		console.log(ruta);
 		cb(null, ruta);
 	},
 	filename: function (req, file, cb) {
@@ -28,7 +27,7 @@ productRoutes.get('/control', productController.controlPanel)
 
 // Create
 productRoutes.get("/create", productController.createProduct)
-productRoutes.post('/createNew', productController.create)
+productRoutes.post('/createNew', upload.single('image'), productController.create)
 
 // Edit
 productRoutes.get('/edit/:id', productController.editProduct)

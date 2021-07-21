@@ -14,7 +14,7 @@
     <%- include('./partials/header')%>
 
     <main class="mainformularios">
-            <form action="/products/createNew" method="post" class=formulariologin>
+            <form action="/products/createNew" method="post" class=formulariologin enctype="multipart/form-data">
                 <article>
                     <label>¡Bienvenidx a Mercado Liebre!<br>Para registrar un producto por favor ingrese:</label>   
                 </article>
@@ -31,10 +31,10 @@
                     <label>Descuento:</label>
                     <input type="number" name="discount" placeholder="descuento"></input>
                 </div>
-                <!-- <div>
+                <div>
                     <label>imagen:</label>
                     <input type="file" name="image" ></input>
-                </div> -->
+                </div>
                     <div>
                     <button type="submit">Enviar</button>
                 </div>
