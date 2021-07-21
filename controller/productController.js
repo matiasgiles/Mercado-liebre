@@ -37,7 +37,7 @@ delete: async (req, res) => {
     const id = req.params.id;
     await db.Products.destroy({where :{id:id}})
 
-    res.redirect('/products/catalogue');
+    res.redirect('/products/control');
 },
 
 // EDIT
